@@ -64,6 +64,7 @@ const Orrery = ({ neos }) => {
     const sunGeometry = new THREE.SphereGeometry(sunRadius, 32, 32);
     const sunMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
     const sun = new THREE.Mesh(sunGeometry, sunMaterial);
+    sun.userData={name:'Sun'};
     scene.add(sun);
 
     // Solar system planets data
@@ -107,7 +108,7 @@ const Orrery = ({ neos }) => {
       sphere.position.y = Math.random() * 40 - 20;
       sphere.position.z = Math.random() * 40 - 20;
 
-      sphere.userData = { name: neo.name };
+      sphere.userData = { name: 'NEO '+neo.name };
       scene.add(sphere);
       return sphere;
     });
@@ -148,7 +149,7 @@ const Orrery = ({ neos }) => {
       });
 
       raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObjects([...neoSpheres, ...planets]);
+      const intersects = raycaster.intersectObjects([...neoSpheres, ...planets, sun]);
 
       if (intersects.length > 0) {
         const intersectedObject = intersects[0].object;
@@ -186,7 +187,7 @@ const Orrery = ({ neos }) => {
 
   return (
     <div style={{ position: 'relative' }}>
-      <div ref={mountRef} style={{ width: '100%', height: '500px' }} />
+      <div ref={mountRef} style={{ width: '100%', height: '800px' }} />
       {(hoveredNEO || hoveredPlanet) && (
         <div
           ref={tooltipRef}
@@ -197,9 +198,9 @@ const Orrery = ({ neos }) => {
             padding: '5px',
             borderRadius: '3px',
             pointerEvents: 'none',
-            transform: 'translate(-50%, -100%)',
+            transform: 'translate(-50%,50%)',
             whiteSpace: 'nowrap',
-            bottom: '0',
+            top: '0',
             left: '50%',
           }}
         >
