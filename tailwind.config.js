@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         'roboto': ['Roboto', 'sans-serif'], // Adding Roboto font
         'outfit': ['Outfit', 'sans-serif'], // Adding Outfit font
+        'p2p': ['"Press Start 2P"', 'sans-seri'],
         // You can also set default font families if needed
       },
     },
