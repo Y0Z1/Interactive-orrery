@@ -102,11 +102,11 @@ const Orrery = ({ neos,planets }) => {
         type: "Gas Giant",
         overview: "Saturn is famous for its stunning rings, made primarily of ice and rock particles. It has a thick atmosphere of hydrogen and helium.",
         length_of_year: "29.46 Earth Years" },
-      { name: 'Uranus', size: 2, distance: 55, texture: '/textures/uranus.jpg', hasRings:true,ringTexture:'/textures/uranusring.gif',
+      { name: 'Uranus', size: 2, distance: 62, texture: '/textures/uranus.jpg', hasRings:true,ringTexture:'/textures/uranusring.gif',
         type: "Ice Giant",
         overview: "Uranus is unique for its tilted axis, causing extreme seasonal variations. It has a cold atmosphere composed mainly of hydrogen, helium, and methane.",
         length_of_year: "84 Earth Years" },
-      { name: 'Neptune', size: 2, distance: 60, texture: '/textures/neptune.jpg', hasRings:false,
+      { name: 'Neptune', size: 2, distance: 80, texture: '/textures/neptune.jpg', hasRings:false,
         type: "Ice Giant",
         overview: "Neptune is the farthest planet from the Sun and is known for its deep blue color. It has strong winds and storms, including the Great Dark Spot.",
         length_of_year: "164.8 Earth Years" },
@@ -287,13 +287,13 @@ const Orrery = ({ neos,planets }) => {
 
   return (
     <div style={{ position: 'relative' }}>
-      <div ref={mountRef} className='w-full h-[80vh]' />
+      <div ref={mountRef} className='w-full h-[78vh]' />
       {(hoveredNEO || hoveredPlanet) && (
         <div ref={tooltipRef} className='absolute left-1/2 top-0 text-white bg-gray-900 p-2 rounded-md no-select pointer-events-none -translate-x-1/2 translate-y-1/2'>
           {hoveredNEO ? hoveredNEO : (
             <>
               <h3>{hoveredPlanet.name}</h3>
-              <div className='absolute left-10 top-0 text-white bg-gray-900 p-4 w-[50vh] rounded-md no-select pointer-events-none translate-x-3/4'>
+              <div className='absolute left-10 top-0 bg-opacity-55 text-white bg-gray-900 p-4 w-[45vh] rounded-md no-select pointer-events-none translate-x-3/4'>
               <h2 className='text-lg font-bold'>Type: </h2><h3>{hoveredPlanet.type}</h3>
               <h2 className='text-lg font-bold'>Overview: </h2><h3>{hoveredPlanet.overview}</h3>
               <h2 className='text-lg font-bold'>Length of year: </h2><h3>{hoveredPlanet.length_of_year}</h3>
