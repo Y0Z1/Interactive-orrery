@@ -327,7 +327,7 @@ const OrreryPx = ({ neos }) => {
           {hoveredNEO ? hoveredNEO : (
             <>
               <h3>{hoveredPlanet.name}</h3>
-              <div className='absolute left-10 top-0 text-sm text-white bg-gray-900 p-4 w-[50vh] rounded-md no-select pointer-events-none translate-x-3/4'>
+              <div className='absolute left-10 top-0 text-[0.8em] text-white bg-gray-900 p-4 w-[50vh] rounded-md no-select pointer-events-none translate-x-3/4'>
               <h2 className='text-lg font-bold'>Type: </h2><h3 className='text-[0.8em]'>{hoveredPlanet.type}</h3>
               <h2 className='text-lg font-bold'>Overview: </h2><h3 className='text-[0.8em]'>{hoveredPlanet.overview}</h3>
               <h2 className='text-lg font-bold'>Length of year: </h2><h3 className='text-[0.8em]'>{hoveredPlanet.length_of_year}</h3>
