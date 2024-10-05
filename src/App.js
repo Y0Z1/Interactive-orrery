@@ -37,7 +37,7 @@ function PopupNEO (neoData) {
   
   return (
     <div className="App m-4">
-      <div onClick={toggleModal} className='absolute'><Button text={'Near Earth Objects'}/></div>
+      <div onClick={toggleModal} className='absolute'><Button text={'NEOs'}/></div>
       <div className='text-right font-p2p'><ButtonPX text={"Pixel Mode"} page={'/Pixels'}/></div>
       <Modal show={showModal} onClose={closeModal}/>
     </div>
@@ -84,7 +84,7 @@ function ButtonPX({text,page}){
          class="absolute transitiona-all duration-1000 opacity-50 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
      </div>
      <a href={page} title="Pixel"
-         class="relative inline-flex items-center justify-center px-8 py-4 text-md hover:text-lg hover:font-semibold text-white transition-all duration-200 bg-gray-900 hover:bg-gray-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+         class="relative inline-flex items-center justify-center px-8 py-4 text-[0.8em] hover:text-[0.9em] hover:font-semibold text-white transition-all duration-200 bg-gray-900 hover:bg-gray-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
          role="button">{text}
      </a>
  </div>)

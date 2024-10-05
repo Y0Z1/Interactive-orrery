@@ -37,7 +37,7 @@ function PopupNEO (neoData) {
   
   return (
     <div className="App m-4">
-      <div onClick={toggleModal} className='absolute '><Button text={'Near Earth Objects'}/></div>
+      <div onClick={toggleModal} className='absolute '><Button text={'NEOs'}/></div>
       <div className='text-right font-outfit'><ButtonPX text={"Realistic Mode"} page={'/'}/></div>
       <Modal show={showModal} onClose={closeModal}/>
     </div>
@@ -58,8 +58,9 @@ const Modal = ({ show , onClose }) => {
   if (!show) return null; // Don't render if `show` is false
 
   return (
-  <>
+<>
     <NearEarthObjects neos={neoData} />
+
   </>
   );
 };
@@ -71,7 +72,7 @@ function Button({text}){
          class="absolute transitiona-all duration-1000 opacity-50 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
      </div>
      <div title="Just Click"
-         class="relative no-select inline-flex items-center justify-center px-8 py-4 text-md hover:text-lg hover:font-bold text-white transition-all duration-200 bg-gray-900 hover:bg-gray-800 font-p2p rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+         class="relative no-select inline-flex items-center justify-center px-8 py-4 text-[0.8em] hover:text-[0.9em] hover:font-bold text-white transition-all duration-200 bg-gray-900 hover:bg-gray-800 font-p2p rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
          role="button">{text}
      </div>
  </div>)
